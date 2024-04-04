@@ -45,7 +45,6 @@ int main()
         {
             result = "den benh vien ngay";
         }
-        cout << " Chi so BMI= " << setprecision(2) << fixed << bmi << endl
-             << "Ket Luan: " << result;
+        cout << "Ket Luan: " << result;
     }
 }
