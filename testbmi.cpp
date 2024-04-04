@@ -1,33 +1,47 @@
-#include<iostream>
-#include<iomanip>
+#include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-int main(){
+int main()
+{
     float weight, height, bmi;
-    string result="";
 
-    cout<<"Nhap can nang: "; cin>>weight;
-    cout<<"Nhap chieu cao: "; cin>>height;
-    if((weight<10||weight>500)||(height <0.5 ||height>2.6)) {
-        cout<<"Lỗi";
+    cout << "Nhap can nang: ";
+    cin >> weight;
+    cout << "Nhap chieu cao: ";
+    cin >> height;
+    if ((weight < 10 || weight > 500) || (height < 0.5 || height > 2.6))
+    {
+        cout << "Lỗi";
         return 0;
     }
     else
     {
-    bmi= weight/(height*height);
+        string result = "";
+            bmi = weight / (height * height);
 
-    if(bmi<18.5){
-        result="Duoi chuan";
-    }else if(bmi>=18.5 && bmi<=25){
-        result = "Chuan";
-    }else if(bmi>25 && bmi<30){
-        result = "Thua can";
-    }else if(bmi>=30 && bmi<=40){
-        result = "Beo, can giam can";
-    }else{
-        result = "Rat beo, can giam can ngay";
+        if (bmi < 18.5)
+        {
+            result = "Duoi chuan";
+        }
+        else if (bmi >= 18.5 && bmi <= 25)
+        {
+            result = "Chuan";
+        }
+        else if (bmi > 25 && bmi < 30)
+        {
+            result = "Thua can";
+        }
+        else if (bmi >= 30 && bmi <= 40)
+        {
+            result = "Beo, can giam can";
+        }
+        else
+        {
+            result = "Rat beo, can giam can ngay";
+        }
+        cout << " Chi so BMI= " << setprecision(2) << fixed << bmi << endl
+             << "Ket Luan: " << result;
     }
-    cout<<" Chi so BMI= "<<setprecision(2)<<fixed<<bmi<<endl<<"Ket Luan: "<<result;
-}
 }
