@@ -9,7 +9,12 @@ int main(){
 
     cout<<"Nhap can nang: "; cin>>weight;
     cout<<"Nhap chieu cao: "; cin>>height;
-
+    if((weight<10||weight>500)||(height <0.5 ||height>2.6)) {
+        cout<<"Lỗi";
+        return 0;
+    }
+    else
+    {
     bmi= weight/(height*height);
 
     if(bmi<18.5){
@@ -24,4 +29,5 @@ int main(){
         result = "Rat beo, can giam can ngay";
     }
     cout<<" Chi so BMI= "<<setprecision(2)<<fixed<<bmi<<endl<<"Ket Luan: "<<result;
+}
 }
