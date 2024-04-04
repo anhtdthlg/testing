@@ -33,13 +33,17 @@ int main()
         {
             result = "Thua can";
         }
-        else if (bmi >= 30 && bmi <= 40)
+        else if (bmi >= 30 && bmi <=35)
         {
             result = "Beo, can giam can";
         }
+        else if (bmi >= 35 && bmi <40)
+        {
+            result = "Beo phi, can giam can gap";
+        }
         else
         {
-            result = "Rat beo, can giam can ngay";
+            result = "den benh vien ngay";
         }
         cout << " Chi so BMI= " << setprecision(2) << fixed << bmi << endl
              << "Ket Luan: " << result;
